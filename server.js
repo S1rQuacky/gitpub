@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 //to be required by server from database (/models/drinks.js)
 const drinks = require("./models/drinks");
+const food = require("./models/drinks");
 
 //home get route
 app.get('/', (req, res) => {
@@ -19,8 +20,9 @@ app.get('/', (req, res) => {
 
 //updated route to render drinks in drinks_index.ejs
 app.get('/drinks', (req, res) => {
-    res.render('drinks_index.ejs', {allDrinks: drinks});
+    res.render('drinks_index.ejs', {allDrinks: drinks, allFood: food});
 });
+
 
 ///initial show route 
 // app.get('/drinks/:id', (req, res) => {

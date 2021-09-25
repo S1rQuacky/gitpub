@@ -15,15 +15,24 @@
 </head>
 <body>
     <h1>Welcome to Gitpub</h1>
+    <h2>Drink Menu</h2>
         <ul>
             <% for(let i = 0; i < allDrinks.length; i++) {%>
             <li style="list-style-type: none;">
                 <a href="/drinks/<%= i %>">
                     <%= allDrinks[i].name.charAt(0).toUpperCase() + allDrinks[i].name.slice(1) %>
-                   
-
                 </a>
             </li>
+            <% } %>
+        </ul>
+    <h2>Food Menu</h2>
+        <ul>
+            <% for(let i2 = 0; i2 < allFood.length; i2++) {%>
+                <li style="list-style-type: none;">
+                    <a href="/drinks/<%= i2 %>">
+                    <%= allFood[i2].name.charAt(0).toUpperCase() + allFood[i2].name.slice(1) %>
+                </a>
+                </li>
             <% } %>
         </ul>
     
