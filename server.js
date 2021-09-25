@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 //to be required by server from database (/models/drinks.js)
 const drinks = require("./models/drinks");
-const food = require("./models/drinks");
+const food = require("./models/food");
 
 //home get route
 app.get('/', (req, res) => {
@@ -33,6 +33,12 @@ app.get('/drinks', (req, res) => {
 app.get('/drinks/:id', (req, res) => {
     res.render("drinks_show.ejs", {drink: drinks[req.params.id]})
 })
+//////////////////
+// Struggled to get the food data to display once clicked
+///////////////////
+// app.get('/foods/:id2', (req, res) => {
+//     res.render("food_show.ejs", {eats: food[req.params.id2] })
+// })
 
 //setting to listen port 3000 with message
 app.listen(port, () => {
