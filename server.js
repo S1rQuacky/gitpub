@@ -22,9 +22,14 @@ app.get('/drinks', (req, res) => {
     res.render('drinks_index.ejs', {allDrinks: drinks});
 });
 
-//initial show route 
+///initial show route 
 app.get('/drinks/:id', (req, res) => {
     res.send(req.params.id)
+})
+
+//linked show route index to show- will show array position of clicked drink
+app.get('/drinks/:id', (req, res) => {
+    res.render("drinks_index.ejs", {drink: drinks[req.params.id]})
 })
 
 //setting to listen port 3000 with message
