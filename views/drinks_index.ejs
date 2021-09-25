@@ -7,7 +7,8 @@
     <style type="text/css">
         body {
             color: royalblue;
-            background-color: peru
+            background-color: peru;
+            text-align: center
         }
     </style>
     <title>Gitpub</title>
@@ -16,7 +17,7 @@
     <h1>Welcome to Gitpub</h1>
         <ul>
             <% for(let i = 0; i < allDrinks.length; i++) {%>
-            <li>
+            <li style="list-style-type: none;">
                 <a href="/drinks/<%= i %>">
                     <%= allDrinks[i].name.charAt(0).toUpperCase() + allDrinks[i].name.slice(1) %>
                    
