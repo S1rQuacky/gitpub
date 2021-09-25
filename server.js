@@ -12,11 +12,15 @@ app.get('/', (req, res) => {
     res.send('Welcome to the Gitpub App!');
 });
 
-//route to display drinks as json in browser
-app.get('/drinks', (req, res) => {
-    res.send(drinks);
-})
+///route to display drinks as json in browser
+// app.get('/drinks', (req, res) => {
+//     res.send(drinks);
+// })
 
+//updated route to render drinks in drinks_index.ejs
+app.get('/drinks', (req, res) => {
+    res.render('drinks_index.ejs');
+});
 
 //setting to listen port 3000 with message
 app.listen(port, () => {
