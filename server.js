@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 //updated route to render drinks in drinks_index.ejs
 app.get('/drinks', (req, res) => {
-    res.render('drinks_index.ejs');
+    res.render('drinks_index.ejs', {allDrinks: drinks});
 });
 
 //setting to listen port 3000 with message
