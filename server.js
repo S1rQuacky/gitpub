@@ -22,6 +22,11 @@ app.get('/drinks', (req, res) => {
     res.render('drinks_index.ejs', {allDrinks: drinks});
 });
 
+//initial show route 
+app.get('/drinks/:id', (req, res) => {
+    res.send(req.params.id)
+})
+
 //setting to listen port 3000 with message
 app.listen(port, () => {
     console.log("listening",port);
